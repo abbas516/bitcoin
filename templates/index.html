@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Welcome | BitCoin Price Prediction</title>
+    <title>BitCoin Price Prediction</title>
 </head>
-
 <body>
 
-  <div class="section1">
-    <header>
-      <img class="logo" src="media/logo.webp" alt="logo" height="50px">
-      <div class="menu-toggle"></div>
-      <nav id="nav_desktop">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="login.html" class="active">Login</a></li>
-        </ul>
-      </nav>
-    </header>       
-      <div id="column1">
-        <div>
-          <h1>bitcoin price predictions for cryptocurrency</h1>
-        </div>
+    <div class="section1">
+      <header>
+        <img class="logo" src="media/logo.webp" alt="logo" height="50px">
+        <div class="menu-toggle"></div>
+        <nav id="nav_desktop">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>       
+        <div id="column1">
+            
+            <form action= "http://127.0.0.1:5000/">
+              
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" required>
+              
+                  <button type="submit">Login</button>
+                </form>
+                  
+              
 
-        <form action="/predict" method="post" id="pform">
-          <label for="uname"><b>Enter Date</b></label>
-          <input type="text" placeholder="Enter Username" name="close" required>
-          <button type="submit">Predict</button>
-        </form>
-        
-        <div id="ptext">
-          <h4>{{ prediction_text }}</h4>
         </div>
-
-      </div>
-  </div>
+    </div>
 </body>
-</html>       
+</html>
+
+  
+  
