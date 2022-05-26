@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome | BitCoin Price Prediction</title>
+</head>
+
+<body>
+
+  <div class="section1">
+    <header>
+      <img class="logo" src="media/logo.webp" alt="logo" height="50px">
+      <div class="menu-toggle"></div>
+      <nav id="nav_desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </header>       
+      <div id="column1">
+        <div>
+          <h1>bitcoin price predictions for cryptocurrency</h1>
+        </div>
+
+        <form action="{{ url_for('predict')}}"method="post" id="pform">
+          <label for="uname"><b>Enter Date</b></label>
+          <input type="text" placeholder="Enter Username" name="close" required>
+          <button type="submit">Predict</button>
+        </form>
+        
+        <div id="ptext">
+          <h4>{{ prediction_text }}</h4>
+        </div>
+
+      </div>
+  </div>
+</body>
+</html>       
